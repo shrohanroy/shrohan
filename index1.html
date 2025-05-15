@@ -2,22 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Shrohan's Page</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shrohan | Web Developer</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <div class="min-h-screen flex flex-col items-center justify-center">
-    <div class="bg-white shadow-xl rounded-2xl p-8 max-w-md w-full text-center">
-      <h1 class="text-4xl font-bold text-blue-600 mb-4">Hello, I'm Shrohan 👋</h1>
-      <p class="text-lg text-gray-600 mb-6">
-        Welcome to my personal page! I'm learning web development and exploring new projects.
-      </p>
-      <button onclick="alert('Thanks for visiting, friend! 😊')"
-              class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-full transition-all">
-        Say Hi!
-      </button>
-    </div>
-  </div>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Shrohan</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hello, I'm <span>Shrohan</span></h1>
+    <p>A passionate Web Developer</p>
+  </section>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
